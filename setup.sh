@@ -1,4 +1,11 @@
+## THANKS TO EVANUGARTE  
+
+## https://github.com/evanugarte/mongocxx-tutorial 
+
 #!/bin/bash
+
+
+
 
 # i found the below steps from:
 # https://developer.mongodb.com/community/forums/t/problems-trying-to-compile-mongocxx/2084
