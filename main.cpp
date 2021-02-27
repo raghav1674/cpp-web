@@ -1,4 +1,9 @@
+
+
 #include "crow_all.h"
+#include <mongocxx/oid.hpp>
+
+
 
 using namespace std;
 using namespace crow;
@@ -66,6 +71,19 @@ int main(int argc,char *argv[]){
 			sendHTML(res,"index");
 		 }
 	);
+	// route to handle different types of methods
+	
+         CROW_ROUTE(app,"/api").methods(HTTPMethod::POST)(
+
+		// get the request method
+		[](const request& req,response &res){
+		string method  = method_name(req.method);
+
+		res.write(method+" api");
+		res.end();
+		}
+	);
+
 
 
 	// route for about page 
